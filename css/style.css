@@ -48,7 +48,7 @@ nav {
 .quicksand-menu li {
   display: inline-block;
   /* Los elementos de la lista en línea */
-  margin:  15px;
+  margin: 0 15px;
   /* Espaciado entre los enlaces */
 }
 
