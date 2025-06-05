@@ -1,0 +1,138 @@
+/* styles.css */
+body {
+  font-family: 'Quicksand', sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #6e6e6e;
+  /* Cambia el fondo si lo deseas */
+    display: grid;
+  /* Usar grid para organizar el contenido */
+  grid-template-columns: 1fr;
+  /* Una columna por defecto */
+}
+
+header {
+  text-align: center;
+  background-color: #333;
+  /* Color de fondo del encabezado */
+  padding: 20px;
+}
+
+.logo {
+  image-rendering: auto;
+  max-width: 25%;
+  height: auto;
+}
+
+nav {
+  background-color: #333;
+  /* Color de fondo del menú */
+  color: #fff;
+  /* Color del texto del menú */
+}
+
+.quicksand-menu {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  text-align: center;
+}
+
+.quicksand-menu h2 {
+  margin-bottom: 10px;
+}
+
+.quicksand-menu li {
+  display: inline;
+  /* Los elementos de la lista en línea */
+  margin: 0 15px;
+  /* Espaciado entre los enlaces */
+}
+
+.quicksand-menu a {
+  color: white;
+  /* Color de los enlaces */
+  text-decoration: none;
+  /* Sin subrayado en los enlaces */
+}
+
+.quicksand-menu a:hover {
+  text-decoration: underline;
+  /* Subrayar al pasar el ratón */
+}
+
+main {
+  padding: 20px;
+  /* Espaciado en el contenedor principal */
+}
+
+.seccion {
+  margin-bottom: 20px;
+  /* Espaciado entre secciones */
+  text-align: center;
+  /* Centrar el contenido */
+}
+
+.contenedor-flex {
+  display: flex;
+  /* Usar flexbox para organizar los elementos */
+  flex-wrap: wrap;
+  /* Permitir que los elementos se envuelvan si es necesario */
+  justify-content: space-around;
+  /* Espaciado entre los elementos */
+}
+
+.cards {
+  background-color: #fff;
+  /* Color de fondo para cada caja */
+  border: 1px solid #ccc;
+  /* Bordes de las cajas */
+  border-radius: 8px;
+  /* Bordes redondeados */
+  margin: 10px;
+  /* Espaciado alrededor de cada caja */
+  padding: 15px;
+  /* Espaciado interno de las cajas */
+  text-align: center;
+  /* Centrar texto e imágenes dentro de la caja */
+  flex: 0 1 200px;
+  /* Tamaño mínimo de las cajas y permite que crezcan */
+  display: grid;
+  /* Usar grid para organizar el contenido */
+  grid-template-columns: 1fr;
+  /* Una columna por defecto */
+  gap: 10px;
+  /* Espacio entre los elementos dentro de la caja */
+}
+
+.cards img {
+  max-width: 100%;
+  /* Asegurarse de que las imágenes no se desborden */
+  height: auto;
+  /* Mantener la proporción de la imagen */
+}
+
+.podcast-container {
+  display: flex;
+  /* Usar flexbox para la sección del podcast */
+  align-items: center;
+  /* Centrar el contenido */
+  margin-top: 20px;
+  /* Espaciado superior */
+}
+
+footer {
+  text-align: center;
+  padding: 10px 0;
+  background-color: #333;
+  /* Color de fondo del pie de página */
+  color: white;
+  /* Color del texto del pie de página */
+}
+
+a {
+  color: inherit;
+  /* Hereda el color del texto del elemento padre */
+  text-decoration: none;
+  /* Elimina el subrayado */
+}
