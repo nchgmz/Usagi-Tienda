@@ -46,9 +46,9 @@ nav {
 }
 
 .quicksand-menu li {
-  display: inline;
+  display: inline-block;
   /* Los elementos de la lista en línea */
-  margin: 0 15px;
+  margin:  15px;
   /* Espaciado entre los enlaces */
 }
 
@@ -151,16 +151,21 @@ a {
   }
 }
 
-.podcast, .iframe-container {
-  width: 48%;
+.podcast,
+.iframe-container {
+  width: 100%;
   aspect-ratio: 16 / 9;
   overflow: hidden;
-  position: relative;}
-  .podcast img {
+  position: relative;
+}
+
+.podcast img {
   width: 100%;
   height: 100%;
-  object-fit:contain;}
-  .iframe-container iframe {
+  object-fit: cover;
+}
+
+.iframe-container iframe {
   width: 100%;
   height: 100%;
   border: none;
