@@ -24,7 +24,7 @@ header {
   image-rendering: auto;
   max-width: 25%;
   height: auto;
-  
+
 }
 
 nav {
@@ -111,14 +111,9 @@ main {
 
 .podcast-container {
   display: flex;
-  /* Usar flexbox para la sección del podcast */
-  flex-direction: row;
-  /* Colocar el podcast y el iframe uno debajo del otro */
-  align-items: left;
-  /* Centrar el contenido */
+  flex-wrap: wrap;
   justify-content: center;
-  margin-top: 20px;
-  /* Espaciado superior */
+  gap: 20px;
 }
 
 footer {
@@ -140,15 +135,11 @@ a {
   text-decoration: none;
   /* Elimina el subrayado */
 }
+
 @media (max-width: 768px) {
   .quicksand-menu li {
     display: block;
     margin: 10px 0;
-  }
-
-  .podcast-container {
-    flex-direction: column;
-    align-items: center;
   }
 
   .logo {
@@ -159,14 +150,17 @@ a {
     flex: 1 1 90%;
   }
 }
-.iframe-container {
-  width: 50%;
-  aspect-ratio: 16 / 9; /* Esto lo hace responsivo */
-  overflow: hidden;
-  position: relative;
-}
 
-.iframe-container iframe {
+.podcast, .iframe-container {
+  width: 48%;
+  aspect-ratio: 16 / 9;
+  overflow: hidden;
+  position: relative;}
+  .podcast img {
+  width: 100%;
+  height: 100%;
+  object-fit:contain;}
+  .iframe-container iframe {
   width: 100%;
   height: 100%;
   border: none;
