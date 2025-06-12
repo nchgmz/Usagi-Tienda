@@ -10,16 +10,20 @@ body {
   grid-template-columns: 1fr;
   /* Una columna por defecto */
 }
-
+/* Encabezado */
 header {
   text-align: center;
   background-color: #333;
-  /* Color de fondo del encabezado */
-  padding: 20px;
+  width: 100px;
+
+}
+
+.encabezado {
+  width: 100%;
+  overflow: hidden;
 }
 
 .logo {
-  image-rendering: auto;
   max-width: 25%;
   height: auto;
 }
