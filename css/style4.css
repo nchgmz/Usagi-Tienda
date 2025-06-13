@@ -1,102 +1,174 @@
-/* styles.css */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
 
 body {
-    font-family: 'Quicksand', sans-serif;
-    margin: 0;
-    padding: 0;
-    background-color: #6e6e6e; /* Cambia el fondo si lo deseas */
-        display: grid;
-  /* Usar grid para organizar el contenido */
+  font-family: 'Quicksand', sans-serif;
+  background-color: #6e6e6e;
+  display: grid;
   grid-template-columns: 1fr;
-  /* Una columna por defecto */
-  }
-  
-  header {
-    text-align: center;
-    background-color: #333; /* Color de fondo del encabezado */
-    padding: 20px;
-    
-  }
-  
+}
+
+/* Encabezado */
+header {
+  text-align: center;
+  background-color: #333;
+  width: 100px;
+
+}
+
+.encabezado {
+  width: 100%;
+  overflow: hidden;
+}
+
+.logo {
+  max-width: 25%;
+  height: auto;
+}
+
+/* Menú de navegación */
+nav {
+  background-color: #333;
+  color: #fff;
+}
+
+
+.quicksand-menu {
+  display: flex !important;
+  flex-direction: row !important;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: nowrap !important;
+  gap: 30px;
+  padding: 0;
+  margin: 0;
+}
+
+.quicksand-menu li {
+  display: inline-block;
+  white-space: nowrap;
+}
+
+@media (max-width: 768px) {
+  /* ¡Nada de flex-direction: column ni display: block acá! */
+}
+
+/* Contenido principal */
+main {
+  padding: 20px;
+}
+
+.seccion {
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+/* Contenedores flexibles */
+.contenedor-flex {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px;
+}
+
+.caja {
+  background-color: #fff;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  padding: 15px;
+  text-align: center;
+  flex: 1 1 min(300px, 90%);
+  max-width: 400px;
+  margin: auto;
+}
+
+.caja img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 6px;
+}
+
+/* Podcast */
+.podcast-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px;
+}
+
+.podcast,
+.iframe-container {
+  width: 100%;
+  aspect-ratio: 16 / 9;
+  overflow: hidden;
+  position: relative;
+}
+
+.podcast img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.iframe-container iframe {
+  width: 100%;
+  height: 100%;
+  border: none;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+/* Footer */
+footer {
+  text-align: center;
+  padding: 10px 0;
+  background-color: #333;
+  color: white;
+}
+
+/* Titulos */
+h3 {
+  text-align: center;
+  font-size: clamp(20px, 4vw, 28px);
+}
+
+/* Links generales */
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+/* Responsividad extra */
+@media (max-width: 768px) {
   .logo {
-    image-rendering: auto;
-    max-width: 25%;
+    max-width: 50%;
     height: auto;
   }
-  
-  nav {
-    background-color: #333; /* Color de fondo del menú */
-    color: #fff; /* Color del texto del menú */
-  }
-  
+
   .quicksand-menu {
-    list-style: none;
-    padding: 0;
-    margin: 0;
-    text-align: center;
+    flex-direction: column;
+    gap: 10px;
   }
-  
-  .quicksand-menu h2 {
-    margin-bottom: 10px;
-  }
-  
-  .quicksand-menu li {
-    display: inline; /* Los elementos de la lista en línea */
-    margin: 0 15px; /* Espaciado entre los enlaces */
-  }
-  
-  .quicksand-menu a {
-    color: white; /* Color de los enlaces */
-    text-decoration: none; /* Sin subrayado en los enlaces */
-  }
-  
-  .quicksand-menu a:hover {
-    text-decoration: underline; /* Subrayar al pasar el ratón */
-  }
-  
-  main {
-    padding: 20px; /* Espaciado en el contenedor principal */
-  }
-  
-  .seccion {
-    margin-bottom: 20px; /* Espaciado entre secciones */
-    text-align: center; /* Centrar el contenido */
-  }
-  
-  .contenedor-flex {
-    display: flex; /* Usar flexbox para organizar los elementos */
-    flex-wrap: wrap; /* Permitir que los elementos se envuelvan si es necesario */
-    justify-content: space-around; /* Espaciado entre los elementos */
-  }
-  
+
   .caja {
-    background-color: #fff; /* Color de fondo para cada caja */
-    border: 1px solid #ccc; /* Bordes de las cajas */
-    border-radius: 8px; /* Bordes redondeados */
-    margin: 10px; /* Espaciado alrededor de cada caja */
-    padding: 15px; /* Espaciado interno de las cajas */
-    text-align: center; /* Centrar texto e imágenes dentro de la caja */
-    flex: 0 1 200px; /* Tamaño mínimo de las cajas y permite que crezcan */
+    flex: 1 1 100%;
   }
-  
-  .caja img {
-    max-width: 100%; /* Asegurarse de que las imágenes no se desborden */
-    height: auto; /* Mantener la proporción de la imagen */
+}
+
+@media (max-width: 480px) {
+  .logo {
+    max-width: 70%;
   }
-  
-  .podcast-container {
-    display: flex; /* Usar flexbox para la sección del podcast */
-    align-items: center; /* Centrar el contenido */
-    margin-top: 20px; /* Espaciado superior */
+
+  .caja {
+    padding: 100px;
   }
-  
-  footer {
-    text-align: center;
-    padding: 10px 0;
-    background-color: #333; /* Color de fondo del pie de página */
-    color: white; /* Color del texto del pie de página */
+
+  h3 {
+    font-size: 15px;
   }
-  a {
-  color: inherit;        /* Hereda el color del texto del elemento padre */
-  text-decoration: none; /* Elimina el subrayado */
 }

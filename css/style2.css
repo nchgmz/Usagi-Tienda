@@ -140,3 +140,21 @@ a {
   text-decoration: none;
   /* Elimina el subrayado */
 }
+/* Responsividad extra */
+@media (max-width: 768px) {
+  .logo {
+    max-width: 50%;
+    height: auto;
+  }}
+
+  .quicksand-menu {
+    flex-direction: column;
+    gap: 10px;
+  }
+
+
+@media (max-width: 480px) {
+  .logo {
+    max-width: 70%;
+  }}
+  
