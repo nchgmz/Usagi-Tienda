@@ -94,18 +94,19 @@ main {
   /* Espaciado interno de las cajas */
   text-align: center;
   /* Centrar texto e imágenes dentro de la caja */
-  flex: 0 1 200px;
+  flex: 0 1 100px;
   /* Tamaño mínimo de las cajas y permite que crezcan */
   box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
   /* Sombra para dar profundidad */
+
 }
 
 .caja img {
-  max-width: 100%;
-  /* Asegurarse de que las imágenes no se desborden */
+  max-width: 15pc;
   height: auto;
   /* Mantener la proporción de la imagen */
 }
+
 
 .podcast-container {
   display: flex;
@@ -130,9 +131,10 @@ a {
   /* Hereda el color del texto del elemento padre */
   text-decoration: none;
   /* Elimina el subrayado */
+  display: block;
 }
 
-.contenedor-flex :hover {
+.caja:hover {
   transform: translateY(-5px);
   /* Efecto de elevación al pasar el ratón */}
 
